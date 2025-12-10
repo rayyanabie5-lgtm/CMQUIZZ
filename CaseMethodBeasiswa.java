@@ -1,6 +1,7 @@
 import java.util.Scanner;
+
 public class CaseMethodBeasiswa {
-    //Abie
+    // Abie
     static Scanner sc = new Scanner(System.in);
     static final int MAX = 100;
     static String[] nama = new String[MAX];
@@ -11,7 +12,7 @@ public class CaseMethodBeasiswa {
 
     static int jumlahData = 0;
 
-    //Ghulam
+    // Ghulam
     static void tambahData() {
         if (jumlahData >= MAX) {
             System.out.println("Data penuh! Tidak dapat menambah pendaftar lagi.");
@@ -31,10 +32,10 @@ public class CaseMethodBeasiswa {
         jenis[jumlahData] = sc.nextLine();
 
         if (!jenis[jumlahData].equalsIgnoreCase("Reguler") &&
-            !jenis[jumlahData].equalsIgnoreCase("Unggulan") &&
-            !jenis[jumlahData].equalsIgnoreCase("Riset")) {
-                System.out.println("Jenis beasiswa tidak valid!");
-                return;
+                !jenis[jumlahData].equalsIgnoreCase("Unggulan") &&
+                !jenis[jumlahData].equalsIgnoreCase("Riset")) {
+            System.out.println("Jenis beasiswa tidak valid!");
+            return;
         }
 
         System.out.print("Penghasilan orang tua (maksimal 2000000): ");
@@ -49,7 +50,7 @@ public class CaseMethodBeasiswa {
         System.out.println("Pendaftar berhasil disimpan. Total pendaftar: " + jumlahData);
     }
 
-    //timothy
+    // timothy
     static void tampilkanSemua() {
         if (jumlahData == 0) {
             System.out.println("Belum ada pendaftar.");
@@ -62,11 +63,11 @@ public class CaseMethodBeasiswa {
 
         for (int i = 0; i < jumlahData; i++) {
             System.out.printf("%s\t\t%s\t\t%.2f\t%s\t\t%d\n",
-                nama[i], nim[i], ipk[i], jenis[i], penghasilan[i]);
+                    nama[i], nim[i], ipk[i], jenis[i], penghasilan[i]);
         }
     }
 
-    //Ega
+    // Ega
     static void cariJenis() {
         System.out.print("Masukkan jenis beasiswa (Reguler/Unggulan/Riset): ");
         String cari = sc.nextLine();
@@ -88,9 +89,9 @@ public class CaseMethodBeasiswa {
         }
     }
 
-    //ELghulam
+    // ELghulam
     static void hitungRataIPK() {
-        String[] jenisBeasiswa = {"Reguler", "Unggulan", "Riset"};
+        String[] jenisBeasiswa = { "Reguler", "Unggulan", "Riset" };
 
         for (String jns : jenisBeasiswa) {
             double total = 0;
@@ -111,7 +112,7 @@ public class CaseMethodBeasiswa {
         }
     }
 
-    //Abie
+    // Abie
     public static void main(String[] args) {
         while (true) {
             System.out.println("\n=== Sistem Pendaftaran Beasiswa ===");
@@ -125,11 +126,19 @@ public class CaseMethodBeasiswa {
             int pilihan = Integer.parseInt(sc.nextLine());
 
             switch (pilihan) {
-                case 1 : tambahData(); break;
-                case 2 : tampilkanSemua(); break;
-                case 3 : cariJenis(); break;
-                case 4 : hitungRataIPK(); break;
-                case 5 : 
+                case 1:
+                    tambahData();
+                    break;
+                case 2:
+                    tampilkanSemua();
+                    break;
+                case 3:
+                    cariJenis();
+                    break;
+                case 4:
+                    hitungRataIPK();
+                    break;
+                case 5:
                     System.out.println("Program selesai.");
                     return;
                 default:
