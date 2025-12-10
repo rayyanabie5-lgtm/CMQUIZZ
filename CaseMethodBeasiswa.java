@@ -1,5 +1,6 @@
 import java.util.Scanner;
 public class CaseMethodBeasiswa {
+    //Abie
     static Scanner sc = new Scanner(System.in);
     static final int MAX = 100;
     static String[] nama = new String[MAX];
@@ -10,6 +11,7 @@ public class CaseMethodBeasiswa {
 
     static int jumlahData = 0;
 
+    //Ghulam
     static void tambahData() {
         if (jumlahData >= MAX) {
             System.out.println("Data penuh! Tidak dapat menambah pendaftar lagi.");
@@ -108,3 +110,31 @@ public class CaseMethodBeasiswa {
             }
         }
     }
+
+    //Abie
+    public static void main(String[] args) {
+        while (true) {
+            System.out.println("\n=== Sistem Pendaftaran Beasiswa ===");
+            System.out.println("1. Tambah Data Pendaftar Beasiswa");
+            System.out.println("2. Tampilkan Semua Pendaftar");
+            System.out.println("3. Cari Pendaftar berdasarkan Jenis Beasiswa");
+            System.out.println("4. Hitung Rata-rata IPK per Jenis Beasiswa");
+            System.out.println("5. Keluar");
+            System.out.print("Pilih menu (1-5): ");
+
+            int pilihan = Integer.parseInt(sc.nextLine());
+
+            switch (pilihan) {
+                case 1 : tambahData(); break;
+                case 2 : tampilkanSemua(); break;
+                case 3 : cariJenis(); break;
+                case 4 : hitungRataIPK(); break;
+                case 5 : 
+                    System.out.println("Program selesai.");
+                    return;
+                default:
+                    System.out.println("Pilihan tidak valid!");
+            }
+        }
+    }
+}
