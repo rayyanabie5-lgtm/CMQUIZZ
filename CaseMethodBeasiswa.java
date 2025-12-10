@@ -85,3 +85,26 @@ public class CaseMethodBeasiswa {
             System.out.println("Tidak ada pendaftar dengan jenis tersebut.");
         }
     }
+
+    //ELghulam
+    static void hitungRataIPK() {
+        String[] jenisBeasiswa = {"Reguler", "Unggulan", "Riset"};
+
+        for (String jns : jenisBeasiswa) {
+            double total = 0;
+            int count = 0;
+
+            for (int i = 0; i < jumlahData; i++) {
+                if (jenis[i].equalsIgnoreCase(jns)) {
+                    total += ipk[i];
+                    count++;
+                }
+            }
+
+            if (count == 0) {
+                System.out.println(jns + ": tidak ada pendaftar.");
+            } else {
+                System.out.printf("%s : rata-rata IPK = %.2f\n", jns, total / count);
+            }
+        }
+    }
