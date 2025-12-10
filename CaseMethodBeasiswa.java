@@ -63,3 +63,25 @@ public class CaseMethodBeasiswa {
                 nama[i], nim[i], ipk[i], jenis[i], penghasilan[i]);
         }
     }
+
+    //Ega
+    static void cariJenis() {
+        System.out.print("Masukkan jenis beasiswa (Reguler/Unggulan/Riset): ");
+        String cari = sc.nextLine();
+
+        boolean ketemu = false;
+
+        for (int i = 0; i < jumlahData; i++) {
+            if (jenis[i].equalsIgnoreCase(cari)) {
+                if (!ketemu) {
+                    System.out.println("\nData ditemukan:");
+                }
+                ketemu = true;
+                System.out.println(nama[i] + " - " + nim[i] + " - IPK: " + ipk[i]);
+            }
+        }
+
+        if (!ketemu) {
+            System.out.println("Tidak ada pendaftar dengan jenis tersebut.");
+        }
+    }
