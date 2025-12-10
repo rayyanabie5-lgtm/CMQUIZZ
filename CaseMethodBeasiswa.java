@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class CaseMethodBeasiswa {
     // Abie
     static Scanner sc = new Scanner(System.in);
-    static final int MAX = 100;
+    static final int MAX = 4;
     static String[] nama = new String[MAX];
     static String[] nim = new String[MAX];
     static double[] ipk = new double[MAX];
